@@ -49,7 +49,12 @@ header nav a{
 	transition: all 0.4s ease-in-out;
 	margin-bottom: 2px;
 }
-
+.id1  {
+	border-radius: 10px 10px 0px 0px;
+}
+.id2{
+	border-radius: 0px 0px 10px 10px;
+}
 nav:hover a{
 	text-shadow: 0px 0px 10px #fff;
 	color: transparent;
@@ -59,8 +64,8 @@ nav a:hover{
 	background:transparent;
 	text-shadow: 1px 1px 10px rgba(71,80,23,0.6);
 	color: #c4d95a;
-
 }
+
 footer{
 	background: #000;
 	color: #ccc; 
@@ -69,38 +74,152 @@ footer{
 main{
 	width: 90%;
 	margin: 0 auto;
+	/*background-color: yellow;*/
+	
 }
 
 h2{
-	font-size: 3em;
+	font-size: 2em;
 	text-transform: uppercase;
 }
-
-.servicios, .database, .tipos, .contactos{
+.servicios,.database,.tipos,.contactos{
 	padding: 3em 1em;
+	margin: 0 auto;	
+	
 }
-
-.serviciodetalle{
-	width: 30%:
-	background:red;
+.serviciodetalle, .tipodetalle{
+	width: 33%;
+	/*background:green;*/
 	color: #000;
+	text-align: justify;
+	display: inline-block;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px #333;
 }
-
-.serviciodeatalle img{
+/*
+#dos{
+	background-color: black;
+}*/
+#sd1 , #sd2{
+	float: top;
+	/*background-color: red;*/
+}
+.serviciodetalle img, .tipodetalle img{
 	width: 100%;
-	transition: .5s ease-in-out;
+	transition: .6s ease-in-out;
 	border-radius: 10px 10px 0 0;
+	float: top;
+
 }
 .serviciodetalle img:hover{
 	filter: grayscale(90%);
 	/*filter: saturate(200%);*/
 	transform:  scale(1.3);
-	transition: .5s ease-in-out;
+	transition: .6s ease-in-out;
 }
 
-footer h6{
-	padding: 3em 0;
+.tipodetalle img:hover{
+	border-radius: 50%;
+	transform:rotate(360deg);
+	box-shadow: 4px 4px 6px #fff;
+	transition: .6s ease-in-out;
 }
-@media only screen and(max-width: 480px){
+footer h6{
+	background: #000;
+	color: #ccc;
+	text-align: center;
+	padding: 3em 0em;
+}
+@media screen and (max-width: 480px){
+	.tipodetalle, .serviciodetalle{
+		display: block;
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	header nav{
+		width: 50%;
+		margin: 0 auto;
+		border: 1px solid  0px 0px 10px #fff;
+	    border-radius: 15px;
+	  	margin-right: 4.5em;
+	}
+	header nav a{
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		background-color: rgba(255,255,255,0.2);
+		text-shadow: 3px 3px 2px 2px #fff;
+		font-size: 1.1em;
+		padding: 0.3em 0.3em;
+		letter-spacing: 3px;
+		transition: all 0.4s ease-in-out;
+		margin-bottom: 4px;
+		
+	}
+	.tipodetalle img:hover{
+	border-radius: 2em 4em  1em;
+	transform:rotate(360deg);
+	box-shadow: 4px 4px 6px #fff;
+	transition: .6s ease-in-out;
+}
+.serviciodetalle img:hover{
+	filter: contrast(180%);
+	/*filter:brightness(120%);*/
+	/*filter: saturate(200%);*/
+	transform:  scale(1.2);
+	transition: .6s ease-in-out;
+}
+}
+
+@media screen and (max-width: 800px ) and (min-width: 480px){
+	.tipodetalle, .serviciodetalle{
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	header{
+		background: url(../images/bg_bird.jpg);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: initial;
+		background-color: #999;
+		height: 100%;
+		
+	}
+	header nav{
+		width: 50%;
+		margin: 0 auto;
+		border: 1px solid  0px 0px 10px #fff;
+	    border-radius: 15px;
+	  	margin-right: 6.5em;
+	}
+	header nav a{
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		background-color: rgba(255,255,255,0.4);
+		text-shadow: 3px 3px 2px 2px #fff;
+		font-size: 1.1em;
+		padding: 0.3em 0.3em;
+		letter-spacing: 3px;
+		transition: all 0.4s ease-in-out;
+		margin-bottom: 4px;
+		margin-right: 3em;
+
+	}
+	.serviciodetalle img:hover{
+		filter: saturate(200%);
+		transform:  scale(1.2);
+		transition: .6s ease-in-out;
+	}
+
+	.tipodetalle img:hover{
+		border-radius: 50%;
+		transform:rotate(360deg);
+		box-shadow: 4px 4px 6px #fff;
+		transition: .6s ease-in-out;
+		filter: sepia(50%);
+	}
 
 }
