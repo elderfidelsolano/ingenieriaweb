@@ -161,11 +161,13 @@ footer h6{
 	transform:rotate(360deg);
 	box-shadow: 4px 4px 6px #fff;
 	transition: .6s ease-in-out;
+	filter:drop-shadow(8px 8px 10px gray);
 }
 .serviciodetalle img:hover{
 	filter: contrast(180%);
 	/*filter:brightness(120%);*/
 	/*filter: saturate(200%);*/
+
 	transform:  scale(1.2);
 	transition: .6s ease-in-out;
 }
